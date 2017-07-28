@@ -61,13 +61,16 @@
 
     var input = $('input').val()
     console.log(input);
-    $.get('https://omdb-api.now.sh/?t=jumanji')
+    $.get('https://omdb-api.now.sh/?t=' + input)
     .then(function(data){
-      for (movie in movies)
-      console.log(data);
+      // for (movie in movies)
+      // console.log(data["imdbID"]);
+        var pickle = Object.keys(data)
+        console.log(pickle)
+    movies.push( data["imdbID"])
+
 })
-  movies.push(input)
-  console.log(movies);
+
 
 
 
