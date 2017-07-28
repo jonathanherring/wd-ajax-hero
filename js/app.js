@@ -61,11 +61,13 @@
 
     var input = $('input').val()
     console.log(input);
-$.get('https://omdb-api.now.sh/')
-.then(function(data){
-console.log(data);
-
+    $.get('https://omdb-api.now.sh/?t=jumanji')
+    .then(function(data){
+      for (movie in movies)
+      console.log(data);
 })
+  movies.push(input)
+  console.log(movies);
 
 
 
