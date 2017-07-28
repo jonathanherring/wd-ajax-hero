@@ -56,5 +56,18 @@
     }
   };
 
-  // ADD YOUR CODE HERE
+  $('form').on('submit', function(info) {
+    info.preventDefault();
+
+    var input = $('input').val()
+    console.log(input);
+$.get('https://omdb-api.now.sh/')
+.then(function(data){
+console.log(data);
+
+})
+
+
+
+  })
 })();
